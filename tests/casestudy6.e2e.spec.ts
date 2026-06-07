@@ -21,7 +21,7 @@ type TestData={
 };
 const data = loadJsonWithEnv<TestData>("data/casestudy6.e2e.json");
 
-test.describe("CaseStudt-6: Entrprise E2E Automation", ()=>{
+test.describe.serial("CaseStudt-6: Entrprise E2E Automation", ()=>{
     for(const scenario of data.scenarios){
         const testName = `${scenario.tags.join(" ")} ${scenario.title}`;
         test(testName, async ({page, request}, testInfo)=>{
