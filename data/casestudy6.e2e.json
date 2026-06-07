@@ -1,0 +1,47 @@
+{
+  "config": {
+    "defaultDescription": "Article created via API for E2E validation",
+    "defaultTagList": ["pw-e2e"]
+  },
+  "scenarios": [
+    {
+      "title": "E2E Smoke: Create article and validate in UI",
+      "tags": ["@smoke"],
+      "user": {
+        "usernamePrefix": "nag_smoke",
+        "emailDomain": "example.com",
+        "passwordPattern": "Pw@123"
+      },
+      "article": {
+        "titlePrefix": "SmokeArticle",
+        "bodyPrefix": "SmokeBody"
+      }
+    },
+   {
+      "title": "E2E Regression: Create multiple articles and validate",
+      "tags": ["@regression"],
+      "user": {
+        "usernamePrefix": "nag_reg",
+        "emailDomain": "example.com",
+        "passwordPattern": "Pw@123"
+      },
+      "article": {
+        "titlePrefix": "RegArticle",
+        "bodyPrefix": "RegBody"
+      }
+    },
+    {
+      "title": "E2E Smoke + Regression: Validate logout after article view",
+      "tags": ["@smoke", "@regression"],
+      "user": {
+        "usernamePrefix": "nag_mix",
+        "emailDomain": "example.com",
+        "passwordPattern": "Pw@123"
+      },
+      "article": {
+        "titlePrefix": "MixArticle",
+        "bodyPrefix": "MixBody"
+      }
+    }
+  ]
+}
